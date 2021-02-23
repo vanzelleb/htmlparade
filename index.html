@@ -8,9 +8,10 @@
 
   <body>
     <h1 style="text-align: center;">Preview of all* HTML tags</h1>
-    <h4 style="text-align: center;">
+    <h4 style="text-align: center; font-weight: lighter;">
       *only includes tags that are visible on screen
     </h4>
+    <br />
     <code>
       <a href="https://github.com/vanzelleb/htmlpreview"
         >Link to the code for this page.</a
@@ -42,7 +43,7 @@
           "<hr><h3>&lt;" + tag + "&gt;</h3>"
         );
 
-        elems[i].insertAdjacentHTML("afterend", "<span>" + html + "</span>");
+        elems[i].insertAdjacentHTML("afterend", "<div>" + html + "</div>");
       }
     </script>
   </body>
