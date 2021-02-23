@@ -1,6 +1,5 @@
 body {
   font-family: sans-serif;
-  padding: 0 10px;
 }
 
 .code {
@@ -21,5 +20,5 @@ body {
 }
 
 div {
-  margin: 3rem 0;
+  margin: 2rem 0;
 }
