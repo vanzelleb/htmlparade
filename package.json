@@ -1,7 +1,7 @@
 {
-  "name": "vanilla",
+  "name": "html-parade",
   "version": "1.0.0",
-  "description": "Preview of all HTML tags on a single page",
+  "description": "A single page with a preview of all visible HTML tags.",
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html --open",
@@ -12,5 +12,5 @@
     "@babel/core": "7.2.0",
     "parcel-bundler": "^1.6.1"
   },
-  "keywords": ["html", "preview"]
+  "keywords": []
 }
