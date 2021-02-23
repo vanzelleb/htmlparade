@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Preview of all HTML tags on one page</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <h1 style="text-align: center;">Preview of all* HTML tags</h1>
+    <h4 style="text-align: center;">
+      *only includes tags that are visible on screen
+    </h4>
+    <code>
+      <a href="https://github.com/vanzelleb/htmlpreview"
+        >Link to the code for this page.</a
+      >
+    </code>
+    <code> <abbr title="Hyper Text Markup Language">HTML</abbr> is easy. </code>
+    <code>
+      <address>Lake view 5, 12345 Uptown</address>
+    </code>
+    <script>
+      for (
+        var i = 0, elems = document.getElementsByTagName("code");
+        i < elems.length;
+        i++
+      ) {
+        var html = elems[i].innerHTML;
+        var idx = html.indexOf("<");
+        html = html.substring(idx);
+        elems[i].innerText = html;
+
+        var tag = "";
+        idxSpace = html.indexOf(" ");
+        idxClose = html.indexOf(">");
+        if (idxSpace < idxClose) tag = html.substring(1, idxSpace);
+        else tag = html.substring(1, idxClose);
+
+        elems[i].insertAdjacentHTML(
+          "beforebegin",
+          "<h3>&lt;" + tag + "&gt;</h3>"
+        );
+
+        elems[i].insertAdjacentHTML("afterend", "<span>" + html + "</span>");
+      }
+    </script>
+  </body>
+</html>
