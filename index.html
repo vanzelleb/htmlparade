@@ -1,12 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>HTML Parade</title>
     <meta charset="UTF-8" />
-    <meta name="description" content="Previews of all HTML5 tags on a single page.">
-  <meta name="keywords" content="HTML, HTML5, preview, list, tags">
-  <meta name="author" content="Van Zelleb">
+    <meta name="description" content="A preview of all HTML5 tags on a single page.">
+    <meta name="keywords" content="HTML, HTML5, preview, list, tags">
+    <meta name="author" content="Van Zelleb">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google Analytics -->
+<script>
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-190463463-1', {
+  'storage': 'none'
+});
+  ga('send', 'pageview');
+  </script>
+  <script async src='https://www.google-analytics.com/analytics.js'></script>
+  <!-- End Google Analytics -->
     <link rel="stylesheet" href="styles.css" />
   </head>
 
@@ -18,7 +28,7 @@
     </h4>
     <br />
     <code class="code">
-      <a href="https://github.com/vanzelleb/htmlpreview">Github repository</a>
+      You can contribute to the <a href="https://github.com/vanzelleb/htmlparade" target="_blank">Github repository</a>
     </code>
     <code class="code">
       <abbr title="Hyper Text Markup Language">HTML</abbr> is an
@@ -63,7 +73,7 @@
       <cite>"Love is a serious mental disease."</cite>
     </code>
     <code class="code">
-      <code>For code</code>
+      A line of code: <code>println("Hello world")</code>
     </code>
     <code class="code">
       <datalist>
@@ -102,7 +112,7 @@
       <em>emphasized</em>
     </code>
     <code class="code">
-      <embed type="image/jpg" src="Untitled2.png" width="200" />
+      <embed type="image/jpg" src="image.png" width="200" />
     </code>
     <code class="code">
       <fieldset>
@@ -148,7 +158,7 @@
         <iframe src="https://htmlparade.netlify.app" title="A page in a page"></iframe>
     </code>
     <code class="code">
-        <img src="Untitled2.png" width="200" alt="profile image" />
+        <img src="image.png" width="200" alt="profile image" />
     </code>
     <code class="code">
         <input type="text" placeholder="Credit card number">
@@ -182,8 +192,135 @@
         <input type="week">
     </code>
     <code class="code">
-        <ins>Inserted text</ins>
+        Something got <ins>inserted here</ins>
     </code>
+    <code class="code">
+        Press <kbd>CTRL+Shift+P</kbd>
+  </code>
+  <code class="code">
+      <label>Label for an input tag:</label>
+  </code>
+  <code class="code">
+      This text is <mark>highlighted.</mark>
+  </code>
+  <code class="code">
+      <meter value="0.8">80% done</meter>
+  </code>
+  <code class="code">
+      <object data="/image.png" width="200"></object>
+  </code>
+  <code class="code">
+      This is another <p>paragraph of this text.</p>
+  </code>
+  <code class="code">
+      <picture>
+          <source media="(min-width:650px)" srcset="/image.png">
+          <img src="/image.png" style="width:200px;">
+        </picture>
+  </code>
+  <code class="code">
+      <pre>
+          This HTML element preserves 
+          line breaks
+          and    blank spaces in 
+          the text.
+          </pre>
+  </code>
+  <code class="code">
+      <progress value="66" max="100"> 66% </progress>
+  </code>
+  <code class="code">
+      He said: <q>Use this for short quotes.</q>
+  </code>
+  <code class="code">
+      HTML is <s>difficult</s> easy
+  </code>
+  <code class="code">
+      Computer says <samp>no</samp>
+  </code>
+  <code class="code">
+        <select>
+            <optgroup label="Like">
+                <option>I like</option>
+                <option>I like a lot</option>
+                <option>Great</option>
+            </optgroup>
+            <optgroup label="Dislike">
+                <option>Don't like</option>
+                <option>Don't like at all</option>
+                <option>Horrible</option>
+            </optgroup>
+          </select>
+  </code>
+  <code class="code">
+      <small>Small text</small>
+  </code>
+  <code class="code">
+      <strong>Bookmark this page</strong>
+  </code>
+  <code class="code">
+      Normal text <sub>and lower text.</sub>
+  </code>
+  <code class="code">
+      Normal text <sup>and higher text</sup>
+  </code>
+  <code class="code">
+      <svg width="100" height="100">
+          <circle cx="50" cy="50" r="30" stroke="orange" stroke-width="16" fill="blue" />
+        </svg>
+  </code>
+  <code class="code">
+      <table>
+          <thead>
+              <tr>
+                <th>Month</th>
+                <th>Costs</th>
+              </tr>
+            </thead>
+            <tbody>
+          <tr>
+            <td>January</td>
+            <td>$100</td>
+          </tr>
+          <tr>
+              <td>February</td>
+              <td>$50</td>
+            </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Total</td>
+            <td>$150</td>
+          </tr>
+        </tfoot>
+        </table>
+  </code>
+  <code class="code">
+      <textarea rows="4" cols="50">This element is for entering a lot of text. It overflows automatically when you enter more text than there is space.
+          </textarea>
+  </code>
+  <code class="code">
+      The time is <time>10:10</time>
+  </code>
+
+  <code class="code">
+      This text is <u>underlined</u>
+  </code>
+  <code class="code">
+      <ul>
+          <li>An</li>
+          <li>Unordered</li>
+          <li>List</li>
+        </ul>
+  </code>
+  <code class="code">
+      <video width="300" controls>
+          <source src="https://cdn.videvo.net/videvo_files/video/free/2015-12/small_watermarked/RainbowStar_preview.webm">
+          Your browser does not support the video tag.
+        </video>
+  </code>
+
+
 
     <script>
 
@@ -192,17 +329,24 @@
         i < elems.length;
         i++
       ) {
-        var html = elems[i].innerHTML;
-        var idx = html.indexOf("<");
-        html = html.substring(idx);
+        // locate the start of the code
+        var html = elems[i].innerHTML.trim().replace(/&nbsp;/g, '');;
+        //var idx = html.indexOf("<");
+        //html = html.substring(idx);
         elems[i].innerText = html;
 
-        var tag = "";
-        idxSpace = html.indexOf(" ");
-        idxClose = html.indexOf(">");
-        if (idxSpace < idxClose) tag = html.substring(1, idxSpace);
-        else tag = html.substring(1, idxClose);
-
+        // find and extract the used HTML tag
+        var tag = ""
+        console.log("html: ", html)
+        var idxOpen = html.indexOf("<");
+        console.log("idxOpen", idxOpen)
+        var idxSpace = html.indexOf(" ", idxOpen);
+        console.log("idxSpace", idxSpace)
+        var idxClose = html.indexOf(">");
+        console.log("idxClose", idxClose)
+        if (idxSpace !== -1 && idxSpace < idxClose) tag = html.substring(idxOpen + 1, idxSpace);
+        else tag = html.substring(idxOpen + 1, idxClose);
+        console.log("tag: ", tag)
         elems[i].insertAdjacentHTML(
           "beforebegin",
           "<hr><h3 class='tag'>&lt;" + tag + "&gt;</h3>"
@@ -216,7 +360,7 @@
       ctx.font = "3rem Verdana";
       // Create gradient
       var gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
-      gradient.addColorStop("0"," magenta");
+      gradient.addColorStop("0"," orange");
       gradient.addColorStop("0.5", "blue");
       gradient.addColorStop("1.0", "red");
       // Fill with gradient
