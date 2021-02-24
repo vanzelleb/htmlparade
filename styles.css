@@ -2,6 +2,10 @@ body {
   font-family: sans-serif;
 }
 
+.tag {
+  color: blue;
+}
+
 .code {
   background: #f4f4f4;
   border: 1px solid #ddd;

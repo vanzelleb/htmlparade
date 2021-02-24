@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Preview of all HTML tags on one page</title>
+    <title>HTML Parade</title>
     <meta charset="UTF-8" />
+    <meta name="description" content="Previews of all HTML5 tags on a single page.">
+  <meta name="keywords" content="HTML, HTML5, preview, list, tags">
+  <meta name="author" content="Van Zelleb">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
-    <h1 style="text-align: center;">Preview of all* HTML tags</h1>
+      <h3 style="text-align: center; text-transform:uppercase; font-weight: lighter">A preview of</h3>
+    <h1 style="text-align: center; margin: 0 0">All* HTML5 tags</h1>
     <h4 style="text-align: center; font-weight: lighter;">
-      *only includes tags that are visible on screen
+      *only elements that are visible on screen
     </h4>
     <br />
     <code class="code">
@@ -26,14 +30,13 @@
     <code class="code">
       <article>
         This page lists all visible HTML5 tags and shows a preview of their look
-        & feel. The HTML tags are shown in their pure form without any styling.
+        & feel. The HTML tags are shown in their pure form without any CSS styling.
       </article>
     </code>
     <code class="code">
       <audio controls>
         <source
-          src="https://www.freesoundeffects.com/mp3_89362.mp3"
-          type="audio/mpeg"
+          src="audio"
         />
         Your browser does not support the audio element.
       </audio>
@@ -54,7 +57,10 @@
       <button type="button">A button</button>
     </code>
     <code class="code">
-      <cite>A citation</cite>
+      <canvas width="300" height="150"></canvas>
+    </code>
+    <code class="code">
+      <cite>"Love is a serious mental disease."</cite>
     </code>
     <code class="code">
       <code>For code</code>
@@ -180,6 +186,7 @@
     </code>
 
     <script>
+
       for (
         var i = 0, elems = document.getElementsByClassName("code");
         i < elems.length;
@@ -198,11 +205,23 @@
 
         elems[i].insertAdjacentHTML(
           "beforebegin",
-          "<hr><h3>&lt;" + tag + "&gt;</h3>"
+          "<hr><h3 class='tag'>&lt;" + tag + "&gt;</h3>"
         );
 
         elems[i].insertAdjacentHTML("afterend", "<div>" + html + "</div>");
       }
+
+      var canvas = document.getElementsByTagName("canvas")[0];
+      var ctx = canvas.getContext("2d");
+      ctx.font = "3rem Verdana";
+      // Create gradient
+      var gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
+      gradient.addColorStop("0"," magenta");
+      gradient.addColorStop("0.5", "blue");
+      gradient.addColorStop("1.0", "red");
+      // Fill with gradient
+      ctx.fillStyle = gradient;
+      ctx.fillText("Paint on me!", 10, 90);
     </script>
   </body>
 </html>
