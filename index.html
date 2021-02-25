@@ -3,7 +3,7 @@
   <head>
     <title>HTML Parade</title>
     <meta charset="UTF-8" />
-    <meta name="description" content="A preview of all HTML5 tags on a single page.">
+    <meta name="description" content="A preview of 67 HTML5 tags on a single page.">
     <meta name="keywords" content="HTML, HTML5, preview, list, tags">
     <meta name="author" content="Van Zelleb">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,14 +21,14 @@
   </head>
 
   <body>
-      <h3 style="text-align: center; text-transform:uppercase; font-weight: lighter">A preview of</h3>
-    <h1 style="text-align: center; margin: 0 0">All* HTML5 tags</h1>
-    <h4 style="text-align: center; font-weight: lighter;">
-      *only elements that are visible on screen
-    </h4>
+      <h2 style="text-align: center; font-weight: lighter;  font-family: Tahoma, sans-serif;">Did you know all of these 67</h2>
+    <h1 style="text-align: center; font-family: Tahoma; margin: 0 0">💡 HTML5 tags 😲</h1>
+    <h3 style="text-align: center; font-weight: lighter;  font-family: Tahoma">
+     And how they look on screen?
+    </h3>
     <br />
     <code class="code">
-      You can contribute to the <a href="https://github.com/vanzelleb/htmlparade" target="_blank">Github repository</a>
+      A link to the <a href="https://github.com/vanzelleb/htmlparade" target="_blank">Github repository</a>.
     </code>
     <code class="code">
       <abbr title="Hyper Text Markup Language">HTML</abbr> is an
@@ -40,7 +40,7 @@
     <code class="code">
       <article>
         This page lists all visible HTML5 tags and shows a preview of their look
-        & feel. The HTML tags are shown in their pure form without any CSS styling.
+        & feel. The HTML tags are shown without any CSS styling.
       </article>
     </code>
     <code class="code">
@@ -52,7 +52,7 @@
       </audio>
     </code>
     <code class="code">
-      <b>Fat text</b>
+      This is <b>fat text</b>
     </code>
     <code class="code">
       <bdo dir="rtl">Inverses text direction</bdo>
@@ -60,7 +60,7 @@
     <code class="code">
       <blockquote cite="http://htmlparade.netlify.app">
         This page lists all visible HTML5 tags and shows a preview of their look
-        & feel. The HTML tags are shown in their pure form without any styling.
+        & feel. The HTML tags are shown without any CSS styling.
       </blockquote>
     </code>
     <code class="code">
@@ -73,13 +73,7 @@
       <cite>"Love is a serious mental disease."</cite>
     </code>
     <code class="code">
-      A line of code: <code>println("Hello world")</code>
-    </code>
-    <code class="code">
-      <datalist>
-        <option>Item 1</option>
-        <option>Item 2</option>
-      </datalist>
+      Use this for code: <code>println("Hello world")</code>
     </code>
     <code class="code">
       <dl>
@@ -90,26 +84,29 @@
       </dl>
     </code>
     <code class="code">
-      <del>deleted</del>
+      This word was <del>deleted</del>
     </code>
     <code class="code">
       <details>
         <summary>Click for details</summary>
-        <p>The details obviously.</p>
+        <p>This page lists all visible HTML5 tags and shows a preview of their look & feel. The HTML tags are shown without any CSS styling.</p>
       </details>
     </code>
     <code class="code">
-      <dfn title="HyperText Markup Language">HTML</dfn>
+      A definition of <dfn title="HyperText Markup Language">HTML</dfn>
     </code>
     <code class="code">
-      <dialog open>An open dialog window</dialog>
+      <dialog open>
+        A dialog window
+        <button onclick="this.parentNode.close()">Close</button>
+      </dialog>
     </code>
     <br />
     <br />
     <br />
     <br />
     <code class="code">
-      <em>emphasized</em>
+      This word is <em>emphasized</em>
     </code>
     <code class="code">
       <embed type="image/png" src="/assets/image.png" width="200" />
@@ -145,14 +142,14 @@
     </code>
     <code class="code">
         <header>
-            Maybe have your navigation here.
+            A header text looks just like normal text.
           </header>
     </code>
     <code class="code">
       <hr></hr>
     </code>
     <code class="code">
-        <i>Italic font</i>
+        Fancy looking <i>italic text.</i>
     </code>
     <code class="code">
         <iframe src="https://htmlparade.netlify.app" title="A page in a page"></iframe>
@@ -161,7 +158,7 @@
         <img src="/assets/image.png" width="200" alt="profile image" />
     </code>
     <code class="code">
-        <input type="text" placeholder="Credit card number">
+        <input type="text" placeholder="Enter your name">
     </code>
     <code class="code">
         <input type="checkbox" checked>
@@ -338,21 +335,17 @@
 
         // find and extract the used HTML tag
         var tag = ""
-        console.log("html: ", html)
         var idxOpen = html.indexOf("<");
-        console.log("idxOpen", idxOpen)
         var idxSpace = html.indexOf(" ", idxOpen);
-        console.log("idxSpace", idxSpace)
         var idxClose = html.indexOf(">");
-        console.log("idxClose", idxClose)
         if (idxSpace !== -1 && idxSpace < idxClose) tag = html.substring(idxOpen + 1, idxSpace);
         else tag = html.substring(idxOpen + 1, idxClose);
-        console.log("tag: ", tag)
+        // add the tag element as headline
         elems[i].insertAdjacentHTML(
           "beforebegin",
           "<hr><h3 class='tag'>&lt;" + tag + "&gt;</h3>"
         );
-
+        // show the HTML tag in action
         elems[i].insertAdjacentHTML("afterend", "<div>" + html + "</div>");
       }
 
