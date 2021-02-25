@@ -1,7 +1,7 @@
 {
   "name": "html-parade",
   "version": "1.0.0",
-  "description": "A single page with a preview of all visible HTML tags.",
+  "description": "A single page with a preview of all visible HTML5 tags.",
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html --open",
